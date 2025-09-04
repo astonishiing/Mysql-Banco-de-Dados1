@@ -27,3 +27,11 @@ Show all details of the presidential winners:
 SELECT * FROM nobel
  WHERE winner in ('Theodore Roosevelt','Thomas Woodrow Wilson','Jimmy Carter','Barack Obama')
 ```
+
+Show the winners with first name John
+
+```SQL
+SELECT winner 
+FROM nobel
+WHERE winner like ('John%')
+```
