@@ -68,3 +68,12 @@ SELECT *
 FROM nobel
 WHERE (subject = "Medicine" and yr < 1910) OR (subject = "literature" and yr >= 2004)
 ```
+
+Give the name of the 'peace' winners since the year 2000, including 2000.
+
+```SQL
+SELECT winner
+FROM nobel
+WHERE subject = "peace"
+AND yr >= 2000
+```
