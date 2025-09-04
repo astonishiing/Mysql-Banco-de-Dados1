@@ -43,3 +43,20 @@ SELECT *
 FROM nobel
 where (subject = "Physics" and yr = 1980) OR (subject = "Chemistry" and yr = 1984)
 ```
+
+
+Show the year, subject, and name of winners for 1980 excluding chemistry and medicine
+
+```SQL
+SELECT *
+FROM nobel
+WHERE yr = 1980 AND NOT (subject = "chemistry" OR subject = "medicine")
+```
+
+outra forma de fazer
+
+```SQL
+SELECT * from nobel
+WHERE yr = 1980
+and subject NOT IN ('chemistry','medicine')
+```
